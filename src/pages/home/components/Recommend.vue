@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <img class="item-img" :src="item.imgUrl"/>
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/3c/3c1d865ea3175504a3.img.jpg_200x200_8844d692.jpg',
-        title: '千岛湖',
-        desc: '千年迷魂镇，据传是三国孙权的故里'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/3c/3c1d865ea3175504a3.img.jpg_200x200_8844d692.jpg',
-        title: '千岛湖',
-        desc: '千年迷魂镇，据传是三国孙权的故里'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/3c/3c1d865ea3175504a3.img.jpg_200x200_8844d692.jpg',
-        title: '千岛湖',
-        desc: '千年迷魂镇，据传是三国孙权的故里'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1804/3c/3c1d865ea3175504a3.img.jpg_200x200_8844d692.jpg',
-        title: '千岛湖',
-        desc: '千年迷魂镇，据传是三国孙权的故里'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
