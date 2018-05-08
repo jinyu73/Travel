@@ -80,5 +80,4 @@ export default {
             line-height:.4rem
             text-align: center
             color:$bgColor
-            background:red
 </style>
